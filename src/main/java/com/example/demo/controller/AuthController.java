@@ -46,7 +46,7 @@ public class AuthController {
     @PostMapping("/auth/register")
     public Map<String, Object> registerHandler(@RequestBody User user){
     	
-    	if(this.userRepo.findByEmail(user.getEmail()) != null) {
+    	if(this.userService.findByEmail(user.getEmail()) != null) {
     		throw new EmailExistException(user.getEmail());
     	}
         String encodedPass = passwordEncoder.encode(user.getPassword());
