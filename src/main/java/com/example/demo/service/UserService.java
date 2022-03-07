@@ -20,8 +20,8 @@ public class UserService {
 	 * @param email
 	 * @return usuario si existe email
 	 */
-	public Optional<User> findByEmail(String email) {
-		return this.userRepo.findByEmail(email);
+	public User findByEmail(String email) {
+		return this.userRepo.findByEmail(email).orElse(null);
 	}
 
 	/**
