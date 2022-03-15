@@ -26,9 +26,9 @@ import com.example.demo.exception.LoginCredentialInvalidException;
 import com.example.demo.exception.PasswordNotFoundException;
 import com.example.demo.model.LoginCredentials;
 import com.example.demo.model.User;
-import com.example.demo.service.UserService;
 import com.example.demo.repository.UserRepo;
 import com.example.demo.security.JWTUtil;
+import com.example.demo.service.UserService;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 @RestController //para habilitar esta clase como un controlador REST y que pueda interceptar peticiones al servidor.
@@ -171,6 +171,20 @@ public class AuthController {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(apiError);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
     
