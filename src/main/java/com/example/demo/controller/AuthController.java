@@ -26,6 +26,7 @@ import com.example.demo.exception.LoginCredentialInvalidException;
 import com.example.demo.exception.PasswordNotFoundException;
 import com.example.demo.model.LoginCredentials;
 import com.example.demo.model.User;
+import com.example.demo.service.UserService;
 import com.example.demo.repository.UserRepo;
 import com.example.demo.security.JWTUtil;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -34,6 +35,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 public class AuthController {
 
     @Autowired private UserRepo userRepo;
+    @Autowired private UserService userService;
     @Autowired private JWTUtil jwtUtil;
     @Autowired private AuthenticationManager authManager;
     @Autowired private PasswordEncoder passwordEncoder;
